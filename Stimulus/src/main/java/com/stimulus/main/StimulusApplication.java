@@ -9,5 +9,4 @@ public class StimulusApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(StimulusApplication.class, args);
 	}
-
 }
