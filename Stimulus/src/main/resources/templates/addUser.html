@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>asdhaid</title>
-		<link th:href="@{/css/addUser.css}" ref="stylesheet">
+		<title>User - New</title>
+		<link rel="stylesheet" th:href="@{/css/addUser.css}" />
 	</head>
 	
 	<body>
 		<div id="form-card">
+			<h1>Usuário</h1>
+			
 			<form id="form-add-user" method="POST" action="/api/user/new">
 				<div class="row">
 					<label for="id">ID</label>
@@ -52,7 +54,7 @@
 					<input type="text" name="wallpaper" placeholder="Foto de fundo">
 				</div>
 				
-				<button type="submit">Enviar</button>
+				<button id="btn-submit" type="submit">Enviar</button>
 			</form>
 		</div>
 		
