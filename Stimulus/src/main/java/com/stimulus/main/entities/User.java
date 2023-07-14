@@ -22,15 +22,7 @@ public class User implements Serializable {
 	private String picture;
 	private String wallpaper;
 	
-	private User(User user) {
-		this.id = user.id;
-		this.type = user.type;
-		this.name = user.name;
-		this.username = user.username;
-		this.email = user.email;
-		this.password = user.password;
-		this.picture = user.picture;
-		this.wallpaper = user.wallpaper;
+	private User() {
 	}
 	
 	public Long getId() {

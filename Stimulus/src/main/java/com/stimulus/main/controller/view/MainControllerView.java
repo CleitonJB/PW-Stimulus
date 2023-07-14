@@ -31,9 +31,4 @@ public class MainControllerView {
 		String etag = "uuuuepaaa! uuuuuuuuiiii"; //Espécie de tag para a página retornada
 		return ResponseEntity.ok().eTag(etag).body(body);
 	}
-	
-	@GetMapping("/form/new/user")
-	public String addUser() {
-		return "addUser";
-	}
 }
