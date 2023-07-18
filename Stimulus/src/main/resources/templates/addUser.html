@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>User - New</title>
+		<link rel="stylesheet" th:href="@{/css/addUser.css}" />
+	</head>
+	
+	<body>
+		<div id="form-card">
+			<h1>Usuário</h1>
+			
+			<form id="form-add-user" method="POST" action="/api/user/new">
+				<div class="row">
+					<label for="id">ID</label>
+					<input type="number" name="id" placeholder="ID">
+				</div>
+				
+				<div class="row">
+					<label for="type">Tipo</label>
+					<select name="type" placeholder="Tipo">
+						<option value="0">ADM</option>
+						<option value="1">Usuário Normal</option>
+						<option value="2">Usuário Reduzido</option>
+					</select>
+				</div>
+				
+				<div class="row">
+					<label for="name">Nome</label>
+					<input type="text" name="name" placeholder="Nome">
+				</div>
+				
+				<div class="row">
+					<label for="username">Nome do usuário</label>
+					<input type="text" name="username" placeholder="Nome do usuário">
+				</div>
+				
+				<div class="row">
+					<label for="email">Email</label>
+					<input type="email" name="email" placeholder="Email">
+				</div>
+				
+				<div class="row">
+					<label for="password">Senha</label>
+					<input type="password" name="password" placeholder="Senha">
+				</div>
+				
+				<div class="row">
+					<label for="picture">Foto</label>
+					<input type="text" name="picture" placeholder="Foto">
+				</div>
+				
+				<div class="row">
+					<label for="wallpaper">Foto de fundo</label>
+					<input type="text" name="wallpaper" placeholder="Foto de fundo">
+				</div>
+				
+				<button id="btn-submit" type="submit">Enviar</button>
+			</form>
+		</div>
+		
+		<script>
+			function onSubmit() {
+				fetch("/api/user/new", {
+					method: "POST",
+					headers: {
+      					"Content-Type": "application/html"
+               		},
+               		body: {
+						 id: document.getElementById("id"),
+						 type: document.getElementById("type"),
+						 name: document.getElementById("name"),
+						 username: document.getElementById("username"),
+						 email: document.getElementById("email"),
+						 password: document.getElementById("password"),
+						 picture: document.getElementById("picture"),
+						 wallpaper: document.getElementById("wallpaper"),
+					}
+				}).then();
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+2023-07-11 23:47:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id)) [42001-214]
+2023-07-11 23:53:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id)) [42001-214]
+2023-07-12 00:07:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id)) [42001-214]
+2023-07-12 00:08:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id)) [42001-214]
+2023-07-12 00:09:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id)) [42001-214]
+2023-07-12 00:30:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id)) [42001-214]
+2023-07-12 00:31:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id)) [42001-214]
+2023-07-12 00:32:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id)) [42001-214]
+2023-07-13 22:54:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id)) [42001-214]
+2023-07-13 22:58:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id)) [42001-214]
+2023-07-13 23:28:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id)) [42001-214]
+2023-07-13 23:29:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id)) [42001-214]
+2023-07-13 23:30:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id)) [42001-214]
+2023-07-13 23:31:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), name varchar(255), password varchar(255), picture varchar(255), type tinyint check (type between 0 and 2), username varchar(255), wallpaper varchar(255), primary key (id)) [42001-214]
+2023-07-13 23:32:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]user (email,name,password,picture,type,username,wallpaper,id) values (?,?,?,?,?,?,?,?)"; expected "identifier"; SQL statement:
+insert into user (email,name,password,picture,type,username,wallpaper,id) values (?,?,?,?,?,?,?,?) [42001-214]
+2023-07-13 23:33:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]user (email,name,password,picture,type,username,wallpaper,id) values (?,?,?,?,?,?,?,?)"; expected "identifier"; SQL statement:
+insert into user (email,name,password,picture,type,username,wallpaper,id) values (?,?,?,?,?,?,?,?) [42001-214]
+2023-07-13 23:34:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]user (email,name,password,picture,type,username,wallpaper,id) values (?,?,?,?,?,?,?,?)"; expected "identifier"; SQL statement:
+insert into user (email,name,password,picture,type,username,wallpaper,id) values (?,?,?,?,?,?,?,?) [42001-214]
