@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>User - New</title>
+		<link rel="stylesheet" th:href="@{/css/addUser.css}" />
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	
+	<body>
+		<div id="form-card">
+			<h1>Usuário</h1>
+
+			<!--<form id="form-add-user" method="POST" action="/api/user/new">-->
+			<form id="form-add-user" method="post" th:action="@{~/user/form/new2}">
+				<div class="row">
+					<label for="id">ID</label>
+					<input type="number" name="id" placeholder="ID" required>
+				</div>
+				
+				<div class="row">
+					<label for="type">Tipo</label>
+					<select name="type" placeholder="Tipo" required>
+						<option value="0">ADM</option>
+						<option value="1">Usuário Normal</option>
+						<option value="2">Usuário Reduzido</option>
+					</select>
+				</div>
+				
+				<div class="row">
+					<label for="name">Nome</label>
+					<input type="text" name="name" placeholder="Nome" required>
+				</div>
+				
+				<div class="row">
+					<label for="username">Nome do usuário</label>
+					<input type="text" name="username" placeholder="Nome do usuário" required>
+				</div>
+				
+				<div class="row">
+					<label for="email">Email</label>
+					<input type="email" name="email" placeholder="Email" required>
+				</div>
+				
+				<div class="row">
+					<label for="password">Senha</label>
+					<input type="password" name="password" placeholder="Senha" required>
+				</div>
+				
+				<div class="row">
+					<label for="picture">Foto</label>
+					<input type="text" name="picture" placeholder="Foto" required>
+				</div>
+				<!--<div class="row">
+					<label for="picture">Foto</label>
+					<input type="file" name="picture" placeholder="Foto" required>
+				</div>-->
+				
+				<div class="row">
+					<label for="wallpaper">Foto de fundo</label>
+					<input type="text" name="wallpaper" placeholder="Foto de fundo" required>
+				</div>
+				<!--<div class="row">
+					<label for="wallpaper">Foto de fundo</label>
+					<input type="file" name="wallpaper" placeholder="Foto de fundo" required>
+				</div>-->
+				
+				<button id="btn-submit" type="submit">Enviar</button>
+			</form>
+		</div>
+	</body>
+</html>
