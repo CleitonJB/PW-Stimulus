@@ -1,0 +1,27 @@
+1) Relacionamentos
+
+- A tabela "Users" possui relacionamento com a tabela "Posts". A tabela "Posts" depende da existência de um usuário ("Users") para existir, mas um usuário não depende de um 
+post ("Posts") para o mesmo.
+- A tabela "Posts" possui relacionamento com a tabela "Comments". A tabela "Posts" não depende da existência de um comentário ("Comments"), mas os comentários precisam de um 
+post para existir.
+- Usuários de tipo "3" ("User reduced") não podem comentar em posts. [Validar a ideia de poderem ou não publicar um post]
+- As tabelas "Posts" e "Comments" possuem relacionamento com a tabela "Counters". A mesma é responsável por armazenar a quantidade de curtidas e comentários que os posts e 
+comentários possuem.
+
+2) Tipos de usuários
+
+A aplicação inicialmente não visa alcançar o mercado empresarial, logo, não há pretenções e necessidades da criação de diversos tipos de usuários com diferentes tipos e níveis 
+de acesso. Portanto, o tipos de usuários serão restringidos inicialmente como:
+
+1 = "ADM"
+    Descrição: Possui acesso total há todas às funcionalidades implementadas no sistemas.
+    Atribuição: Um usuário de tipo "1" ("ADM") deve ser criado manualmente dentro do gerenciador de banco de dados.
+
+2 = "User normal"
+    Descrição: Possui acesso há todas às funcionalidades destinadas aos usuários comuns (normais) do sistema.
+    Atribuição: Um usuário comum é criado com o tipo "2" ("User normal").
+
+3 = "User reduced"
+    Descrição: Possui acesso reduzido às funcionalidades destinadas aos usuários comuns.
+    Atribuição: Um usuário do tipo "2" ("User normal") pode ter o seu tipo alterado (reduzido) para "3" ("User reduced") por descumprir com alguma das diretrizes da plataforma 
+    como forma de punição.
