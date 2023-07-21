@@ -22,4 +22,9 @@ public class UserControllerView {
 	public void addUser2(@RequestBody User user) {
 		System.out.println("USER 2: " + user);
 	}
+	
+//	@PostMapping("/form/new3")
+//	public void addUser3(@ModelAttribute User user) {
+//		System.out.println("USER 3: " + user);
+//	}
 }

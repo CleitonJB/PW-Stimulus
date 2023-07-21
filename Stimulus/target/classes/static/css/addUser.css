@@ -15,7 +15,9 @@ body {
 }
 
 #form-card {
-	width: min(700px, 60vw);
+	width: 700px; /*min(700px, 60vw)*/
+	min-width: 700px;
+	max-width: 700px;
 	height: fit-content;
 	padding: 1rem 2rem;
 	border-radius: 15px;
