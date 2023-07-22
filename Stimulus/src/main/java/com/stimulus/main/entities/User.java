@@ -41,6 +41,9 @@ public class User implements Serializable {
 	public String getEmail() {
 		return this.email;
 	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	
 	public String getPicture() {
 		return this.picture;
