@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.stimulus.main.entities.User;
 import com.stimulus.main.repository.UserRepository;
 
+@Service
 public class UserService {
 	@Autowired
 	private UserRepository userRepository;
