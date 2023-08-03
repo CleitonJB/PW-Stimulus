@@ -12,10 +12,10 @@ public class MainControllerView {
 	//Formas de retornar uma página HTML via path pesquisado
 	
 	//1
-	@GetMapping("/")
-	public String page1() {
-		return "index";
-	}
+//	@GetMapping("/")
+//	public String page1() {
+//		return "index";
+//	}
 	
 	//2
 	@GetMapping("/something")
@@ -30,5 +30,11 @@ public class MainControllerView {
 		String body = "Hello world!"; //Conteúdo a ser retornado
 		String etag = "uuuuepaaa! uuuuuuuuiiii"; //Espécie de tag para a página retornada
 		return ResponseEntity.ok().eTag(etag).body(body);
+	}
+	
+	//VALENDO
+	@GetMapping("")
+	public String initialTemplate() {
+		return "template";
 	}
 }

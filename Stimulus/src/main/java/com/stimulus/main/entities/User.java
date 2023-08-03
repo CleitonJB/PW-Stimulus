@@ -26,28 +26,64 @@ public class User implements Serializable {
 		return this.id;
 	}
 	
+//	public void setId(Long id) {
+//		this.id = id;
+//	}
+	
 	public UserTypes getType() {
 		return this.type;
+	}
+	
+	public void setType(UserTypes type) {
+		this.type = type;
 	}
 	
 	public String getName() {
 		return this.name;
 	}
 	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
 	public String getUsername() {
 		return this.username;
+	}
+	
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	
 	public String getEmail() {
 		return this.email;
 	}
 	
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
 	public String getPicture() {
 		return this.picture;
 	}
 	
+//	public String getPassword() {
+//		return password;
+//	}
+
+//	public void setPassword(String password) {
+//		this.password = password;
+//	}
+
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
+	
 	public String getWallpaper() {
 		return this.wallpaper;
+	}
+	
+	public void setWallpaper(String wallpaper) {
+		this.wallpaper = wallpaper;
 	}
 	
 	@Override
