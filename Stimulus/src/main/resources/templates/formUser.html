@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>User - New</title>
-		<link rel="stylesheet" th:href="@{/css/addUser.css}" />
+		<title>Usuário - Novo</title>
+		<link rel="stylesheet" th:href="@{/css/formUser.css}" />
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	</head>
 	
@@ -10,8 +10,7 @@
 		<div id="form-card">
 			<h1>Usuário</h1>
 
-			<!--<form id="form-add-user" method="post" th:action="@{~/user/form/new2}">-->
-			<form id="form-add-user" method="post" th:action="@{~/user/form/new2}">
+			<form id="form-add-user" method="post">
 				<div class="row">
 					<label for="id">ID</label>
 					<input type="number" name="id" id="id" placeholder="ID" required>
@@ -85,7 +84,7 @@
 				
 				formData = JSON.stringify(formData)
 				
-				fetch("/api/user/new", {
+				fetch("/api/user", {
 					method: "POST",
 					headers: {
       					"Content-Type": "application/json"
