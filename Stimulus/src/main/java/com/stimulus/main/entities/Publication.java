@@ -17,8 +17,11 @@ public class Publication {
 	private int comments;
 	
 	public Long getId() {
-		return Long.valueOf(this.id);
+		return this.id;
 	}
+//	public void setId(Long id) {
+//		this.id = id;
+//	}
 	
 	public PublicationTypes getType() {
 		return this.type;
