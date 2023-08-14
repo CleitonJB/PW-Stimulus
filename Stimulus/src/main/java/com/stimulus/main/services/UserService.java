@@ -73,7 +73,7 @@ public class UserService {
         }
     }
 
-    public void delete(Long id) {
+    public void deleteById(Long id) {
         User obj = findById(id);
 
         try {

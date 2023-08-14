@@ -66,13 +66,13 @@ public class User implements Serializable {
 		return this.picture;
 	}
 	
-//	public String getPassword() {
-//		return password;
-//	}
+	public String getPassword() {
+		return password;
+	}
 
-//	public void setPassword(String password) {
-//		this.password = password;
-//	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	public void setPicture(String picture) {
 		this.picture = picture;
