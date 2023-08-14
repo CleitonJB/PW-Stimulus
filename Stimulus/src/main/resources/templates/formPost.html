@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Post - Formulário</title>
+		<link rel="stylesheet" th:href="@{/css/formUser.css}" />
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	
+	<body>
+		<div th:switch="${mode}" id="form-card">
+			<h1 th:case="'new'">Post - Novo</h1>
+			<h1 th:case="'change'">Post - Editar</h1>
+			<h1 th:case="'delete'">Post - Excluir</h1>
+
+			<form th:object="${post}" id="form-add-user" method="post">
+				<div class="row">
+					<!-- <label for="id">ID</label> -->
+					<input th:field="*{id}" hidden type="number" name="id" id="id" placeholder="ID" required>
+				</div>
+				
+				<div class="row">
+					<label for="type">Tipo</label>
+					<select th:field="*{type}" name="type" id="type" placeholder="Tipo" required>
+						<option value="0">Publicação</option>
+						<option value="1">Comentário</option>
+					</select>
+				</div>
+				
+				<div class="row">
+					<label for="likes">Qtd. Likes</label>
+					<input th:field="*{likes}" type="text" name="likes" id="likes" placeholder="Likes" required>
+				</div>
+				
+				<div class="row">
+					<label for="comments">Qtd. Comentários</label>
+					<input th:field="*{comments}" type="text" name="comments" id="comments" placeholder="Comments" required>
+				</div>
+				
+				<div class="row">
+					<label for="description">Descrição</label>
+					<input th:field="*{description}" type="text" name="description" id="description" placeholder="Description" required>
+				</div>
+				
+				<div class="row">
+					<label for="url_image">URL</label>
+					<input th:field="*{url_image}" type="text" name="url_image" id="url_image" placeholder="URL da imagem" required>
+				</div>
+				
+				<button id="btn-submit" type="button" th:onclick="onSubmit([[${mode}]])">Enviar</button>
+			</form>
+		</div>
+		
+		<script th:inline="javascript">
+			function getMethodByMode(mode) {
+				switch(mode) {
+					case "new":
+						return "POST";
+					break;
+					
+					case "change":
+						return "PUT";
+					break;
+					
+					case "delete":
+						return "DELETE";
+					break;
+				}
+			}
+			
+			function onSubmit(mode) {
+				console.log("ele: ", document.getElementById("id").value);
+				
+				let formData = {
+					"id": document.getElementById("id").value,
+					"type": document.getElementById("type").value,
+					"likes": document.getElementById("likes").value,
+					"comments": document.getElementById("comments").value,
+					"description": document.getElementById("description").value,
+					"url_image": document.getElementById("url_image").value,
+				};
+				
+				formData = JSON.stringify(formData)
+				
+				fetch("/api/post", {
+					method: getMethodByMode(mode),
+					headers: {
+      					"Content-Type": "application/json"
+               		},
+               		body: formData
+				})
+					.then((response) => response.json())
+					.catch((error) => console.error("Deu erro ali, meu nobre: " + error))
+					.then((data) => {
+						if(data.error) {
+							console.error("Deu erro ali, meu nobre: " + error)
+						} else {
+							alert("Operação realizada com sucesso!");
+						}
+						
+						//window.location.href = "/form/posts";
+						//console.log("dados: ", data);
+					});
+			}
+		</script>
+	</body>
+</html>
