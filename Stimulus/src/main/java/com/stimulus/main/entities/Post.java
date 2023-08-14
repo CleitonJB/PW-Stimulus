@@ -12,10 +12,10 @@ public class Post extends Publication implements Serializable  {
 	private String url_image;
 	private String description;
 	
-	public String getURLImage() {
+	public String getUrl_image() {
 		return this.url_image;
 	}
-	public void setURLImage(String url_image) {
+	public void setUrl_image(String url_image) {
 		this.url_image = url_image;
 	}
 	
