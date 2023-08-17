@@ -28,33 +28,57 @@ public class PostRestController {
 	@Operation(summary = "Obter uma lista das publicações", description = "Obter uma lista das publicações cadastradas", tags = { "Post" })
 	@GetMapping(value = "/posts")
 	public ResponseEntity getAll() {
-		return ResponseEntity.ok(postService.findAll());
+		try {
+			return ResponseEntity.ok(postService.findAll());
+		} catch(Exception error) {
+			return ResponseEntity.status(500).body(error.getMessage());
+		}
 	}
 
 	@Operation(summary = "Obter uma publicação", description = "Obter uma publicação específica baseado no seu campo 'id'", tags = { "Post" })
 	@GetMapping(value = "/post/{id}")
 	public ResponseEntity getOne(@PathVariable("id") Long id) {
-		return ResponseEntity.ok(postService.findById(id));
+		try {
+			return ResponseEntity.ok(postService.findById(id));
+		} catch(Exception error) {
+			return ResponseEntity.status(500).body(error.getMessage());
+		}
 	}
 
 	@Operation(summary = "Criar uma publicação", description = "Criar uma nova publicação (caso já não exista)", tags = { "Post" })
 	@PostMapping(value = "/post")
 	public ResponseEntity save(@RequestBody Post post) {
-		postService.save(post);
-		return ResponseEntity.status(HttpStatus.CREATED).body(post);
+		try {
+			if(post.getUser() == null) {
+				return ResponseEntity.badRequest().body("O Usário não foi informado!");
+			} else {
+				postService.save(post);
+				return ResponseEntity.status(HttpStatus.CREATED).body(post);
+			}
+		} catch(Exception error) {
+			return ResponseEntity.status(500).body(error.getMessage());
+		}
 	}
 
 	@Operation(summary = "Atualizar os dados de uma publicação", description = "Atualizar os dados de uma publicação (enviar todos os campos)", tags = { "Post" })
 	@PutMapping(value = "/post")
 	public ResponseEntity update(@RequestBody Post post) {
-		postService.update(post);
-		return ResponseEntity.status(HttpStatus.OK).build();
+		try {
+			postService.update(post);
+			return ResponseEntity.status(HttpStatus.OK).build();
+		} catch(Exception error) {
+			return ResponseEntity.status(500).body(error.getMessage());
+		}
 	}
 
 	@Operation(summary = "Excluir uma publicação", description = "Excluir uma publicação baseado no seu campo 'id'", tags = { "Post" })
 	@DeleteMapping(value = "/post/{id}")
 	public ResponseEntity delete(@PathVariable("id") Long id) {
-		postService.deleteById(id);
-		return ResponseEntity.ok().build();
+		try {
+			postService.deleteById(id);
+			return ResponseEntity.ok().build();
+		} catch(Exception error) {
+			return ResponseEntity.status(500).body(error.getMessage());
+		}
 	}
 }
