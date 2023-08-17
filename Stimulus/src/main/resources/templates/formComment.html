@@ -66,17 +66,20 @@
 				console.log("ele: ", document.getElementById("id").value);
 				
 				let formData = {
-					"id": document.getElementById("id").value,
-					"type": document.getElementById("type").value,
-					"likes": document.getElementById("likes").value,
+					"id": 		document.getElementById("id").value,
+					"type": 	document.getElementById("type").value,
+					"likes": 	document.getElementById("likes").value,
 					"comments": document.getElementById("comments").value,
-					"message": document.getElementById("message").value,
+					"message": 	document.getElementById("message").value,
 				};
 				
-				formData = JSON.stringify(formData)
+				formData = JSON.stringify(formData);
 				
-				fetch("/api/comment", {
-					method: getMethodByMode(mode),
+				const requestMethod = getMethodByMode(mode);
+				const url = (requestMethod == "DELETE") ? `/api/comment/${JSON.parse(formData).id}` : "/api/comment";
+				
+				fetch(url, {
+					method: requestMethod,
 					headers: {
       					"Content-Type": "application/json"
                		},
