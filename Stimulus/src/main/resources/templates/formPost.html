@@ -71,18 +71,21 @@
 				console.log("ele: ", document.getElementById("id").value);
 				
 				let formData = {
-					"id": document.getElementById("id").value,
-					"type": document.getElementById("type").value,
-					"likes": document.getElementById("likes").value,
-					"comments": document.getElementById("comments").value,
-					"description": document.getElementById("description").value,
-					"url_image": document.getElementById("url_image").value,
+					"id": 			document.getElementById("id").value,
+					"type": 		document.getElementById("type").value,
+					"likes": 		document.getElementById("likes").value,
+					"comments": 	document.getElementById("comments").value,
+					"description": 	document.getElementById("description").value,
+					"url_image": 	document.getElementById("url_image").value,
 				};
 				
-				formData = JSON.stringify(formData)
+				formData = JSON.stringify(formData);
 				
-				fetch("/api/post", {
-					method: getMethodByMode(mode),
+				const requestMethod = getMethodByMode(mode);
+				const url = (requestMethod == "DELETE") ? `/api/post/${JSON.parse(formData).id}` : "/api/post";
+				
+				fetch(url, {
+					method: requestMethod,
 					headers: {
       					"Content-Type": "application/json"
                		},
@@ -91,7 +94,7 @@
 					.then((response) => response.json())
 					.catch((error) => console.error("Deu erro ali, meu nobre: " + error))
 					.then((data) => {
-						if(data.error) {
+						if(data?.error) {
 							console.error("Deu erro ali, meu nobre: " + error)
 						} else {
 							alert("Operação realizada com sucesso!");
