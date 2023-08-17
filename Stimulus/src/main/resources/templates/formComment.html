@@ -19,6 +19,11 @@
 				</div>
 				
 				<div class="row">
+					<label for="id">ID do usuário (temporário)</label>
+					<input th:field="*{user.id}" type="number" name="user_id" id="user_id" placeholder="ID do usuário" required>
+				</div>
+				
+				<div class="row">
 					<label for="type">Tipo</label>
 					<select th:field="*{type}" name="type" id="type" placeholder="Tipo" required>
 						<!--<option value="0">Publicação</option>-->
@@ -67,6 +72,7 @@
 				
 				let formData = {
 					"id": 		document.getElementById("id").value,
+					"user": 	{ "id": document.getElementById("user_id").value },
 					"type": 	document.getElementById("type").value,
 					"likes": 	document.getElementById("likes").value,
 					"comments": document.getElementById("comments").value,
