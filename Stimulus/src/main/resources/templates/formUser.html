@@ -90,20 +90,23 @@
 				console.log("ele: ", document.getElementById("id").value);
 				
 				let formData = {
-					"id": document.getElementById("id").value,
-					"type": document.getElementById("type").value,
-					"name": document.getElementById("name").value,
-					"username": document.getElementById("username").value,
-					"email": document.getElementById("email").value,
-					"password": document.getElementById("password").value,
-					"picture": document.getElementById("picture").value,	
+					"id": 		 document.getElementById("id").value,
+					"type": 	 document.getElementById("type").value,
+					"name": 	 document.getElementById("name").value,
+					"username":  document.getElementById("username").value,
+					"email": 	 document.getElementById("email").value,
+					"password":  document.getElementById("password").value,
+					"picture": 	 document.getElementById("picture").value,	
 					"wallpaper": document.getElementById("wallpaper").value,
 				};
 				
-				formData = JSON.stringify(formData)
+				formData = JSON.stringify(formData);
 				
-				fetch("/api/user", {
-					method: getMethodByMode(mode),
+				const requestMethod = getMethodByMode(mode);
+				const url = (requestMethod == "DELETE") ? `/api/user/${JSON.parse(formData).id}` : "/api/user";
+				
+				fetch(url, {
+					method: requestMethod,
 					headers: {
       					"Content-Type": "application/json"
                		},
@@ -112,7 +115,7 @@
 					.then((response) => response.json())
 					.catch((error) => console.error("Deu erro ali, meu nobre: " + error))
 					.then((data) => {
-						if(data.error) {
+						if(data?.error) {
 							console.error("Deu erro ali, meu nobre: " + error)
 						} else {
 							alert("Operação realizada com sucesso!");
