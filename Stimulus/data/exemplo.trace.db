@@ -405,3 +405,225 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/cleit/D
 	at org.h2.mvstore.FileStore.open(FileStore.java:128)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
 	... 137 more
+2023-09-27 00:10:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:10:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:16:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:16:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:16:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:16:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:17:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:17:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:17:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:17:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:18:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:18:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:19:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:19:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:19:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:19:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:20:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:20:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:21:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:21:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:22:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:22:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:30:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:30:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:35:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:35:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:37:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:37:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:38:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:38:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:41:41 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Duplicate column name "DATE"; SQL statement:
+ALTER TABLE POST ADD DATE DATE NOT NULL DEFAULT CURRENT_DATE [42121-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.setColumns(Table.java:487)
+	at org.h2.table.TableBase.<init>(TableBase.java:73)
+	at org.h2.mvstore.db.MVTable.<init>(MVTable.java:139)
+	at org.h2.mvstore.db.Store.createTable(Store.java:219)
+	at org.h2.schema.Schema.createTable(Schema.java:776)
+	at org.h2.command.ddl.AlterTableAlterColumn.cloneTableStructure(AlterTableAlterColumn.java:454)
+	at org.h2.command.ddl.AlterTableAlterColumn.copyData(AlterTableAlterColumn.java:339)
+	at org.h2.command.ddl.AlterTableAlterColumn.update(AlterTableAlterColumn.java:242)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-09-27 00:44:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists comment alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists comment alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:44:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post alter column date set data type DATE [*]DEFAULT CURRENT_DATE"; SQL statement:
+alter table if exists post alter column date set data type DATE DEFAULT CURRENT_DATE [42000-214]
+2023-09-27 00:46:08 database: wrong user or password; user: "SA"
+org.h2.message.DbException: Wrong user name or password [28000-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.engine.Engine.openSession(Engine.java:154)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name or password [28000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:510)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 50 more
+2023-09-27 01:29:31 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "COMMENT[*]"; expected "ON"; SQL statement:
+COMMENT [42001-214]
+2023-09-27 03:38:28 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "COMMENT[*]"; expected "ON"; SQL statement:
+COMMENT [42001-214]
+2023-09-27 15:09:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "URL_IMAGE CHARACTER VARYING(255)": "'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISBhITEhMVFhUXDRYX... (14259)"; SQL statement:
+update post set comments=?,description=?,likes=?,type=?,url_image=?,user_id=? where id=? [22001-214]
