@@ -12,6 +12,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 @MappedSuperclass
@@ -23,13 +25,19 @@ public class Publication {
 	@Column(name="date", insertable=false, updatable=false, columnDefinition="DATETIME")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Timestamp date;
+    @Valid
 	@NotNull
 	@ManyToOne
     @JoinColumn(name = "user_id")
 	private User user;
+    @Valid
 	@Enumerated
 	private PublicationTypes type;
+    @NotBlank(message = "O campo 'likes' informado está inválido.")
+    @Column(name = "likes", nullable = false, columnDefinition = "TINYINT(0)")
 	private int likes;
+    @NotBlank(message = "O campo 'comments' informado está inválido.")
+    @Column(name = "comments", nullable = false, columnDefinition = "TINYINT(0)")
 	private int comments;
 	
 	public Long getId() {

@@ -7,17 +7,29 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class User implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	@Valid
 	@Enumerated
 	private UserTypes type;
+    @NotBlank(message = "O campo 'name' informado está inválido.")
 	private String name;
+    @NotBlank(message = "O campo 'username' informado está inválido.")
 	private String username;
+    @Email(message = "O campo 'email' informado está inválido.")
+    @NotNull(message = "Por favor, insira um email válido.")
+    @NotBlank
 	private String email;
+    @NotBlank(message = "O campo 'message' informado está inválido.")
+    @NotNull(message = "Por favor, insira uma senha válida.")
 	private String password;
 	private String picture;
 	private String wallpaper;
