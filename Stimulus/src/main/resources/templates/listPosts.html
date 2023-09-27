@@ -25,6 +25,7 @@
 							</a>
 						</th>
 			      		<th scope="col">#</th>
+			      		<th scope="col">Data</th>
 			      		<th scope="col">Tipo</th>
 			      		<th scope="col">Qtd. Likes</th>
 			      		<th scope="col">Qtd. Comentários</th>
@@ -33,7 +34,7 @@
 			  	</thead>
 			  	
 			  	<!-- Have data -->
-			  	<tbody th:unless="${posts.size() > 0}">
+			  	<tbody th:if="${posts.size() > 0}">
 			    	<tr th:each="post : ${posts}">
 						<td>
 							<a class="col edit-icon" th:href="@{/form/post/{id}/change(id=${post.id})}">
@@ -49,6 +50,7 @@
 							</a>
 						</td>
 			      		<td th:text="${post.id}"></td>
+			      		<td th:text="${post.date}"></td>
 			      		<td th:text="${post.type}"></td>
 			      		<td th:text="${post.likes}"></td>
 			      		<td th:text="${post.comments}"></td>

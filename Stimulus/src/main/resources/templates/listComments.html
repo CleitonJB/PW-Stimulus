@@ -30,6 +30,7 @@
 							</a>
 						</th>
 			      		<th scope="col">#</th>
+			      		<th scope="col">Data</th>
 			      		<th scope="col">Tipo</th>
 			      		<th scope="col">Qtd. Likes</th>
 			      		<th scope="col">Qtd. Comentários</th>
@@ -38,7 +39,7 @@
 			  	</thead>
 			  	
 			  	<!-- Have data -->
-			  	<tbody th:unless="${comments.size() > 0}">
+			  	<tbody th:if="${comments.size() > 0}">
 			    	<tr th:each="comment : ${comments}">
 						<td>
 							<a class="col edit-icon" th:href="@{/form/comment/{id}/change(id=${comment.id})}">
@@ -54,6 +55,7 @@
 							</a>
 						</td>
 			      		<td th:text="${comment.id}"></td>
+			      		<td th:text="${comment.date}"></td>
 			      		<td th:text="${comment.type}"></td>
 			      		<td th:text="${comment.likes}"></td>
 			      		<td th:text="${comment.comments}"></td>

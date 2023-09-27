@@ -41,7 +41,7 @@ public class PostService {
         try {
             return postRepository.save(post);
         } catch (Exception e) {
-            throw new RuntimeException("Falha ao salvar o Post.");
+            throw new RuntimeException("Falha ao salvar o Post: " + e);
         }
     }
 

@@ -38,7 +38,7 @@
 			  	</thead>
 			  	
 			  	<!-- Have data -->
-			  	<tbody th:unless="${users.size() > 0}">
+			  	<tbody th:if="${users.size() > 0}">
 			    	<tr th:each="user : ${users}">
 						<td>
 							<a class="col edit-icon" th:href="@{/form/user/{id}/change(id=${user.id})}">
