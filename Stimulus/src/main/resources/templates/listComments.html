@@ -37,7 +37,8 @@
 			    	</tr>
 			  	</thead>
 			  	
-			  	<tbody>
+			  	<!-- Have data -->
+			  	<tbody th:unless="${comments.size() > 0}">
 			    	<tr th:each="comment : ${comments}">
 						<td>
 							<a class="col edit-icon" th:href="@{/form/comment/{id}/change(id=${comment.id})}">
@@ -59,6 +60,17 @@
 			      		<td th:text="${comment.message}"></td>
 			    	</tr>
 			  	</tbody>
+			  	<!-- No data -->
+				<tfoot th:if="${comments.size() == 0}" class="text-center">
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>Não há comentários para serem listados!</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tfoot>
 			</table>
 		</div>
 	</body>

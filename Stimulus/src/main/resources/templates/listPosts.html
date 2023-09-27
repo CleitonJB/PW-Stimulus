@@ -7,14 +7,9 @@
     	
 		<link rel="stylesheet" th:href="@{/css/listUsers.css}" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" />
-    	
-		<!-- <link rel="stylesheet" th:href="@{/bootstrap/theme-selector.css}" /> -->
 	</head>
 	
 	<body>
-		<!--<div th:replace="template.html :: theme-icons"></div>-->
-		<!--<div th:replace="template.html :: theme-options"></div>-->
-		
 		<div class="page-content">
 			<h1>Posts</h1>
 			
@@ -37,7 +32,8 @@
 			    	</tr>
 			  	</thead>
 			  	
-			  	<tbody>
+			  	<!-- Have data -->
+			  	<tbody th:unless="${posts.size() > 0}">
 			    	<tr th:each="post : ${posts}">
 						<td>
 							<a class="col edit-icon" th:href="@{/form/post/{id}/change(id=${post.id})}">
@@ -59,6 +55,17 @@
 			      		<td th:text="${post.description}"></td>
 			    	</tr>
 			  	</tbody>
+			  	<!-- No data -->
+				<tfoot th:if="${posts.size() == 0}">
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>Não há postagens para serem listadas!</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tfoot>
 			</table>
 		</div>
 	</body>

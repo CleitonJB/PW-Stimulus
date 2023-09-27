@@ -37,7 +37,8 @@
 			    	</tr>
 			  	</thead>
 			  	
-			  	<tbody>
+			  	<!-- Have data -->
+			  	<tbody th:unless="${users.size() > 0}">
 			    	<tr th:each="user : ${users}">
 						<td>
 							<a class="col edit-icon" th:href="@{/form/user/{id}/change(id=${user.id})}">
@@ -59,6 +60,17 @@
 			      		<td th:text="${user.email}"></td>
 			    	</tr>
 			  	</tbody>
+			  	<!-- No data -->
+				<tfoot th:if="${users.size() == 0}">
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>Não há usuários para serem listados!</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tfoot>
 			</table>
 		</div>
 	</body>
