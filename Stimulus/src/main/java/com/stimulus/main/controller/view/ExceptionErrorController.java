@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class ExceptionErrorController {
 	@ExceptionHandler(Exception.class)
 	public String errorException(Exception exception, Model model) {
-		model.addAttribute("exceptionData", exception.getMessage());
+		model.addAttribute("errorMessage", exception.getMessage().toString());
 		//System.out.println(exception.getMessage());
-		return "error1";
+		return "error";
 	}
 }

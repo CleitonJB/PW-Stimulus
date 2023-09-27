@@ -20,29 +20,40 @@ public class UserControllerView {
 
 	@GetMapping("/users")
 	public String listUsers(Model model) {
-		model.addAttribute("users", userService.findAll());
-		return "listUsers";
+		try {
+			model.addAttribute("users", userService.findAll());
+			return "listUsers";
+		} catch(Exception exception) {
+			throw exception;
+		}
 	}
 
 	@GetMapping("/user/{id}/{mode}")
-	public String formUser(@PathVariable("id") String id, @PathVariable("mode") String mode, Model model) {
-		switch(mode) {
-			case "new":
-				model.addAttribute("user", new User());
-				model.addAttribute("mode", "new");
-			break;
+	public String formUser(@PathVariable("id") String id, @PathVariable("mode") String mode, Model model) throws Exception {
+		try {
+			switch(mode) {
+				case "new":
+					model.addAttribute("user", new User());
+					model.addAttribute("mode", "new");
+				break;
+				
+				case "change":
+					model.addAttribute("user", userService.findById(Long.parseLong(id)));
+					model.addAttribute("mode", "change");
+				break;
+				
+				case "delete":
+					model.addAttribute("user", userService.findById(Long.parseLong(id)));
+					model.addAttribute("mode", "delete");
+				break;
+				
+				default:
+					throw(new Exception("Modo de abertura de modal não identificado."));
+			}
 			
-			case "change":
-				model.addAttribute("user", userService.findById(Long.parseLong(id)));
-				model.addAttribute("mode", "change");
-			break;
-			
-			case "delete":
-				model.addAttribute("user", userService.findById(Long.parseLong(id)));
-				model.addAttribute("mode", "delete");
-			break;
+			return "formUser";
+		} catch(Exception exception) {
+			throw exception;
 		}
-		
-		return "formUser";
 	}
 }

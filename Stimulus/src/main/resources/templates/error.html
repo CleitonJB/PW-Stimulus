@@ -7,8 +7,16 @@
 	</head>
 	
 	<body>
-		<h1>Ou... Ou... Ou... um errinho te pegou!</h1>
-
-		<h4 th:text="${exceptionData}"></h4>
+		<div id="error-container">
+			<h1>Ou... Ou... Ou... um errinho te pegou!</h1>
+			<div id="image" title="Erro image"></div>
+	
+			<!-- <h4 th:text="${errorMessage}"></h4> -->
+			<span id="error-content">
+				<h1 th:text="${status}"></h1>
+				<span>|</span>
+				<h4 th:text="${error}"></h4>
+			</span>
+		</div>
 	</body>
 </html>

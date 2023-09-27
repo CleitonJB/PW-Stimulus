@@ -18,29 +18,40 @@ public class CommentControllerView {
 
 	@GetMapping("/comments")
 	public String listComments(Model model) {
-		model.addAttribute("comments", commentService.findAll());
-		return "listComments";
+		try {
+			model.addAttribute("comments", commentService.findAll());
+			return "listComments";
+		} catch(Exception exception) {
+			throw exception;
+		}
 	}
 
 	@GetMapping("/comment/{id}/{mode}")
-	public String formComment(@PathVariable("id") String id, @PathVariable("mode") String mode, Model model) {
-		switch(mode) {
-			case "new":
-				model.addAttribute("comment", new Comment());
-				model.addAttribute("mode", "new");
-			break;
+	public String formComment(@PathVariable("id") String id, @PathVariable("mode") String mode, Model model) throws Exception {
+		try {
+			switch(mode) {
+				case "new":
+					model.addAttribute("comment", new Comment());
+					model.addAttribute("mode", "new");
+				break;
+				
+				case "change":
+					model.addAttribute("comment", commentService.findById(Long.parseLong(id)));
+					model.addAttribute("mode", "change");
+				break;
+				
+				case "delete":
+					model.addAttribute("comment", commentService.findById(Long.parseLong(id)));
+					model.addAttribute("mode", "delete");
+				break;
+				
+				default:
+					throw(new Exception("Modo de abertura de modal não identificado."));
+			}
 			
-			case "change":
-				model.addAttribute("comment", commentService.findById(Long.parseLong(id)));
-				model.addAttribute("mode", "change");
-			break;
-			
-			case "delete":
-				model.addAttribute("comment", commentService.findById(Long.parseLong(id)));
-				model.addAttribute("mode", "delete");
-			break;
+			return "formComment";
+		} catch(Exception exception) {
+			throw exception;
 		}
-		
-		return "formComment";
 	}
 }

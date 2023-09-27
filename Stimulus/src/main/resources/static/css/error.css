@@ -1,7 +1,97 @@
-h1 {
-	color: blue;
+* {
+	margin: 0;
+	padding: 0;
 }
 
-h4 {
+body {
+	width: 100vw;
+	height: 100vh;
+	background-color: whitesmoke;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#error-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	height: fit-content;
+}
+
+#error-container h1 {
+	font-size: 3rem;
+	color: darkgray;
+}
+
+#error-container div#image {
+	width: 100px;
+	height: 100px;
+	
+	background: url('https://static.vecteezy.com/system/resources/previews/008/060/644/original/data-error-icon-designed-in-linear-style-vector.jpg'), white;
+	background-size: 80% 80%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	
+	border: none;
+	border-radius: 50%;
+	box-shadow: 2px 2px 3px #e1e1e1;
+	
+	padding: 4rem;
+	margin: 3rem 0 0 0;
+	
+	animation: rotating 6s linear infinite;
+}
+
+#error-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#error-content h1 {
+	font-size: 5rem;
 	color: red;
+}
+
+#error-content span {
+	color: darkgray;
+	margin: 0 1rem;
+}
+
+#error-content h4 {
+	color: darkgray;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -ms-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
 }

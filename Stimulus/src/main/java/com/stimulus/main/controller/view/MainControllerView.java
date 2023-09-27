@@ -26,8 +26,12 @@ public class MainControllerView {
 
 	@GetMapping("")
 	public String initialTemplate(Model model) {
-		model.addAttribute("posts", postService.findAll());
-		return "index";
+		try {
+			model.addAttribute("posts", postService.findAll());
+			return "index";
+		} catch(Exception exception) {
+			throw exception;
+		}
 	}
 	
 	@Bean
