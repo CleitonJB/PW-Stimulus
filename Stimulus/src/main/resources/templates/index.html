@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt" data-bs-theme="auto">
 	<head>
-		<title>asdhaid</title>
+		<script th:src="@{/js/color-modes.js}"></script>
+	
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+	    <meta name="generator" content="Hugo 0.115.4">
+		<title>Stimulus - Home</title>
+	
+	    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+		<link th:href="@{/bootstrap/bootstrap.min.css}" rel="stylesheet">
+		<link th:href="@{/bootstrap/theme-selector.css}" rel="stylesheet">
+
+		<link th:href="@{/css/card-image.css}" rel="stylesheet">
 	</head>
 	
 	<body>
-		<h1>Hello world!!!</h1>
+		<svg th:replace="fragments/template.html :: theme-icons"></svg>
+
+	    <div th:replace="fragments/template.html :: theme-options"></div>
+	
+		<header th:replace="fragments/template.html :: main-header"></header>
+		
+		<main>
+			<!-- Toolbar sub content -->
+			<section th:replace="fragments/template.html :: main-section"></section>
+			
+			<!-- Lista de publicações -->
+			<div class="album py-5 bg-body-tertiary">
+		    	<div class="container">
+					<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+						<div th:each="post : ${posts}">
+							<!-- Cards -->
+							<div th:replace="fragments/template.html :: card(url_image=${post.url_image}, description=${post.description})"></div>
+							<!-- <span th:text="${post.url_image}"></span> -->
+							<!-- <span th:text="${post.id}"></span> -->
+					      	<!-- <span th:text="${post.type}"></span> -->
+					      	<!-- <span th:text="${post.likes}"></span> -->
+					      	<!-- <span th:text="${post.comments}"></span> -->
+					      	<!-- <span th:text="${post.description}"></span> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		
+		<footer th:replace="fragments/template.html :: footer"></footer>
+		
+		<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 	</body>
 </html>
