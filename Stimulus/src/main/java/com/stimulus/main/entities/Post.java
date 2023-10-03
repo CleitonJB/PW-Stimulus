@@ -8,33 +8,20 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Post implements Serializable {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+public class Post extends Publication implements Serializable  {
 	private String url_image;
 	private String description;
 	
-	public Long getId() {
-		return this.id;
+	public String getUrl_image() {
+		return this.url_image;
 	}
-	
-//	public void setId(Long id) {
-//		this.id = id;
-//	}
-	
-	public String getURLImage() {
-		return url_image;
-	}
-	
-	public void setURLImage(String url_image) {
+	public void setUrl_image(String url_image) {
 		this.url_image = url_image;
 	}
 	
 	public String getDescription() {
-		return description;
+		return this.description;
 	}
-	
 	public void setDescription(String description) {
 		this.description = description;
 	}

@@ -1,0 +1,100 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.page-content {
+	width: 95%;
+	height: fit-content;
+}
+
+.page-content h1 {
+	text-align: center;
+	font-size: 2.5rem;
+	
+	margin: 1rem 0;
+}
+
+table.table {
+	width: 100%;
+	height: fit-content;
+	border-collapse: collapse;
+	table-layout: auto;
+}
+
+table.table tbody tr td:nth-child(1), table.table thead tr th:nth-child(1),
+table.table tbody tr td:nth-child(2), table.table thead tr th:nth-child(2) {
+	width: 5rem;
+	min-width: 5rem;
+	max-width: 5rem;
+	
+	text-align: center;
+}
+
+table.table thead {
+	background-color: #313131;
+	color: white;
+}
+
+table.table thead th:first-child {
+	border-radius: 10px 0 0 0;
+}
+table.table tbody tr:last-child td:first-child {
+	border-radius: 0 0 0 10px;
+}
+table.table thead th:last-child {
+	border-radius: 0 10px 0 0;
+}
+table.table tbody tr:last-child td:last-child {
+	border-radius: 0 0 10px 0;
+}
+
+table.table thead th {
+	padding: 0.75rem 0;
+}
+
+table.table tbody tr:nth-child(even) {
+	background-color: #e9e9e9;
+	color: white;
+}
+
+table.table tbody tr:nth-child(odd) {
+	background-color: #dfdfdf;
+	color: white;
+}
+
+table.table tbody td:nth-child(1), table.table tbody td:nth-child(2) {
+	text-align: center;
+}
+
+table.table tbody td {
+	padding: 0.3rem 0.5rem;
+	color: black;
+	white-space: nowrap;
+}
+
+table.table tbody td a {
+	text-decoration: none;
+}
+
+table.table thead th a svg, table.table tbody td a svg {
+	width: 15px;
+	height: 15px;
+}
+table.table thead th a.add-icon svg {
+	width: 20px;
+	height: 20px;
+	color: white;
+}
+table.table tbody td a.edit-icon svg {
+	color: white;
+}
+table.table tbody td a.delete-icon svg {
+	color: red;
+}

@@ -1,28 +1,48 @@
 package com.stimulus.main.controller.view;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.stimulus.main.entities.User;
+import com.stimulus.main.services.UserService;
 
 @Controller
-@RequestMapping(path = "/user")
+@RequestMapping(path = "/form")
 public class UserControllerView {
-	@GetMapping("/form/new")
-	public String addUser() {
-		return "addUser";
+
+    @Autowired
+    private UserService userService;
+
+	@GetMapping("/users")
+	public String listUsers(Model model) {
+		model.addAttribute("users", userService.findAll());
+		return "listUsers";
 	}
-	
-	@PostMapping("/form/new2")
-	public void addUser2(@RequestBody User user) {
-		System.out.println("USER 2: " + user);
+
+	@GetMapping("/user/{id}/{mode}")
+	public String formUser(@PathVariable("id") String id, @PathVariable("mode") String mode, Model model) {
+		switch(mode) {
+			case "new":
+				model.addAttribute("user", new User());
+				model.addAttribute("mode", "new");
+			break;
+			
+			case "change":
+				model.addAttribute("user", userService.findById(Long.parseLong(id)));
+				model.addAttribute("mode", "change");
+			break;
+			
+			case "delete":
+				model.addAttribute("user", userService.findById(Long.parseLong(id)));
+				model.addAttribute("mode", "delete");
+			break;
+		}
+		
+		return "formUser";
 	}
-	
-//	@PostMapping("/form/new3")
-//	public void addUser3(@ModelAttribute User user) {
-//		System.out.println("USER 3: " + user);
-//	}
 }

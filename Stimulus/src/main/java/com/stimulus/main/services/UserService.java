@@ -23,87 +23,70 @@ public class UserService {
     }
 
     public List<User> findAll() {
-        return userRepository.findAll();
-    }
-
-    public User findById(Long id) {
-        Optional<User> result = userRepository.findById(id);
-        if(result.isEmpty()) {
-            //throw new NotFoundException("Usuário não encontrado.");
-            throw new RuntimeException("Usuário não encontrado.");
-        }
-        return result.get();
-    }
-
-    public User save(User u, MultipartFile file) {
-        //arquivo
-        if(file != null) {
-            if(!file.isEmpty()) {
-                //salvarArquivo(file, u.getEmail() + ".pdf");
-                //u.setDocumentos(c.getEmail() + ".pdf");
-            } else {
-                //u.setDocumentos(null);
-            }
-        }
-        //Verifica se email já está cadastrado
-        verificaEmailCadastrado(u.getEmail());
         try {
-            return userRepository.save(u);
+        	return userRepository.findAll();
         } catch (Exception e) {
-            throw new RuntimeException("Falha ao salvar o usuário.");
+            throw new RuntimeException("Erro ao listar os Usuários.");
         }
     }
 
-    public User update(User u, MultipartFile file) {
-        //Cliente já existe
-    	User obj = findById(u.getId());
-        //arquivo
-        //u.setDocumentos(obj.getDocumentos());
-        if (file != null) {
-            if(!file.isEmpty()) {
-                //salvarArquivo(file, u.getEmail() + ".pdf");
-                //u.setDocumentos(u.getEmail() + ".pdf");
-            }
-        }
+    public Optional<User> findById(Long id) {
         try {
-            u.setEmail(obj.getEmail());
-            return userRepository.save(u);
+        	return userRepository.findById(id);
         } catch (Exception e) {
-            throw new RuntimeException("Falha ao atualizar o cliente.");
+            throw new RuntimeException("Erro ao encontrar o Usuário: ", e);
         }
     }
 
-    public void delete(Long id) {
-        User obj = findById(id);
-
+    public User save(User user, MultipartFile file) {
         try {
-        	userRepository.delete(obj);
-//            if(obj.getDocumentos() != null) {
-//                Path caminho = Paths.get("uploads", obj.getDocumentos());
-//                Files.deleteIfExists(caminho);
-//            }
+        	return userRepository.save(user);
+        	
+//        	Optional<User> result = findById(user.getId());
+//        	
+//        	if(result.isEmpty()) {
+//        		return userRepository.save(user);
+//        	} else {
+//        		throw new RuntimeException("O Usuário não existe para ser atualizado!");
+//        	}
         } catch (Exception e) {
-            throw new RuntimeException("Falha ao excluir o cliente.");
+            throw new RuntimeException("Erro ao criar o Usuário: ", e);
         }
     }
 
-//    private void salvarArquivo(MultipartFile file, String novoNome) {
-//        if (file.getContentType().equals(MediaType.APPLICATION_PDF_VALUE)) {
-//            Path dest = Paths.get("uploads", novoNome);
-//            try {
-//                file.transferTo(dest);
-//            } catch (IOException ex) {
-//                throw new RuntimeException("Falha ao salvar o arquivo.");
-//            }
-//        } else {
-//            throw new RuntimeException("Arquivo deve ser do tipo PDF.");
+    public User update(User user, MultipartFile file) {
+        try {
+        	Optional<User> result = findById(user.getId());
+        	
+        	if(result.isEmpty()) {
+        		throw new RuntimeException("O Usuário não existe para ser atualizado!");
+        	} else {
+                return userRepository.save(user);
+        	}
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao atualizar o Usuário: ", e);
+        }
+    }
+
+    public void deleteById(Long id) {
+        try {
+        	Optional<User> result = findById(id);
+        	
+        	if(result.isEmpty()) {
+        		throw new RuntimeException("O Usuário não existe para ser excluído!");
+        	} else {
+        		userRepository.deleteById(id);
+        		return;
+        	}
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao excluir o Usuário: ", e);
+        }
+    }
+
+//    private void verificaEmailCadastrado(String email) {
+//        List<User> result = userRepository.findByEmail(email);
+//        if (!result.isEmpty()) {
+//            throw new RuntimeException("Email já cadastrado.");
 //        }
 //    }
-
-    private void verificaEmailCadastrado(String email) {
-        List<User> result = userRepository.findByEmail(email);
-        if (!result.isEmpty()) {
-            throw new RuntimeException("CPF ou EMAIL já cadastrados.");
-        }
-    }
 }
